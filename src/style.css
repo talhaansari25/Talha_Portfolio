@@ -699,6 +699,7 @@ h1::selection {
     margin-top: 0;
   }
 
+  
   .slide-container {
     max-width: 100%;
     height: auto;
@@ -1553,7 +1554,7 @@ h1::selection {
   }
 
   .slide-container {
-    max-width: 1120px;
+    max-width: 1450px;
     width: 100%;
     height: 500px;
     display: flex;
@@ -1563,6 +1564,7 @@ h1::selection {
     padding: 40px 0;
   }
   .slide-content {
+    height: 900px;
     margin: 0 0px;
     overflow: hidden;
     text-align: center;
@@ -1570,7 +1572,7 @@ h1::selection {
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
-    height: 400px;
+    height: 100%;
   }
   .card {
     height: 100%; /* adjust based on actual need */
@@ -1601,6 +1603,7 @@ h1::selection {
     font-size: 18px;
     text-align: center;
     margin: 10px;
+    margin-top: 10px;
   }
   
   .description {
@@ -1618,8 +1621,13 @@ h1::selection {
   .view-more {
     margin-top: auto;
     padding-top: 10px;
+    justify-content: center;
+    align-items: center;
   }
   .viewmore-button {
+    justify-content: center;
+    align-items: center;
+    width: 120px;
     text-decoration: none;
     font-size: 14px;
     color: var(--Black);
@@ -1630,6 +1638,11 @@ h1::selection {
     border: 1px solid var(--DarkBlue);
     transition: all 0.5s ease;
   }
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
   
   .viewmore-button:hover {
     color: var(--White);
@@ -1650,8 +1663,10 @@ h1::selection {
   .swiper-navBtn::before,
   .swiper-navBtn::after {
     font-size: 35px;
+    color: #4070f4;
   }
   .swiper-button-next {
+    
     right: 0;
   }
   .swiper-button-prev {
@@ -1686,6 +1701,7 @@ h1::selection {
     /* background: blueviolet; */
     width: 100%;
     text-align: center;
+    margin-top: 70px;
   }
 
   .blog-title h3 {
