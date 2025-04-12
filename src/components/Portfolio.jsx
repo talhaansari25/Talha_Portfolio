@@ -1,5 +1,6 @@
 import React from 'react';
 import "../style.css";
+import { Link } from 'react-router-dom';
 
 
 const Portfolio = () => {
@@ -9,23 +10,25 @@ const Portfolio = () => {
         <div className="portfolio-wrapper">
 
           <div className="webdev">
-            <a href="projects.html" target="_blank" className="card-view" rel="noopener noreferrer">
+            <Link to="/projects" className="card-view">
               <i className="fa-solid fa-code"></i>
               <div className="card-text">
                 <h3 className="card-title">Projects</h3>
                 <p className="card-detail">My Development Portfolio</p>
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="uiux">
-            <a href="S_handle.html" target="_blank" className="card-view" rel="noopener noreferrer">
+            <Link to="/handles" className="card-view">
               <i className="github-logo fa-brands fa-github"></i>
               <div className="card-text">
                 <h3 className="card-title">Social handles</h3>
                 <p className="card-detail">My Social Portfolio</p>
               </div>
-            </a>
+            </Link>
+
+
           </div>
 
         </div>
