@@ -20,7 +20,7 @@ const Education = () => {
     {
       id: 1,
       title: "Btech Computer Science (AIML)",
-      institute: "G H Raisoni College Of Engineering and Management",
+      institute: "G H Raisoni College Of Engineering and Management, Pune",
       date: "NOV 2022 - JUNE 2026",
       scoreLabel: "CGPA",
       scoreValue: "8.13"
@@ -28,7 +28,7 @@ const Education = () => {
     {
       id: 2,
       title: "Class 12",
-      institute: "Rani Lakshmi bai Mulinchi Sainiki Shala & Jr. College",
+      institute: "Nutan Vidyamandir Jr. & Sr. College, Nashik",
       date: "JUNE 2020 - APRIL 2021",
       scoreLabel: "Percentage",
       scoreValue: "83.50%"
@@ -46,7 +46,7 @@ const Education = () => {
           </h2>
           <hr className="education-line" data-aos="fade-right" data-aos-delay="100" />
           <p className="education-subtext" data-aos="fade-right" data-aos-delay="200">
-            My academic journey in technology and artificial intelligence.
+          The progression of my academic studies in Technology and AIML.
           </p>
         </div>
 
