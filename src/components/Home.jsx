@@ -13,7 +13,8 @@ import Skills from "./Skills";
 import Footer from "./Footer";
 import Main from "./Main";
 import Ticker from "./Ticker";
-import Testimonials from "../components/Testimonials";
+
+import Education from "./Education";
 
 
 
@@ -23,7 +24,8 @@ const Home = () => {
     <Main/>
     <Ticker />
     <About />
-    {/* <Testimonials/> */}
+    <Education/>
+   
     <Portfolio/>
     <Achievement/>
     {/* <Projects/>
