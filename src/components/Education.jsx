@@ -29,9 +29,9 @@ const Education = () => {
       id: 2,
       title: "Class 12",
       institute: "Rani Lakshmi bai Mulinchi Sainiki Shala & Jr. College",
-      date: "JUNE 2021 - APRIL 2022",
+      date: "JUNE 2020 - APRIL 2021",
       scoreLabel: "Percentage",
-      scoreValue: "91.10%"
+      scoreValue: "83.50%"
     }
   ];
 
