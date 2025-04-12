@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../projects.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -17,22 +18,22 @@ const Projects = () => {
 
         <ul className="menu desktop-menu">
           <li>
-            <a href="/index.html" className="menu-item hvr-underline-from-left">HOME</a>
+            <Link to="/" className="menu-item hvr-underline-from-left">HOME</Link>
           </li>
           <li>
-            <a href="/index.html#about" className="menu-item hvr-underline-from-left">ABOUT</a>
+            <Link to="/#about" className="menu-item hvr-underline-from-left">ABOUT</Link>
           </li>
           <li>
-            <a href="/S_handle.html" className="menu-item hvr-underline-from-left">PROFILES</a>
+            <Link to="/handles" className="menu-item hvr-underline-from-left">PROFILES</Link>
           </li>
           <li>
-            <a href="/projects" className="menu-item hvr-underline-from-left active-page">PROJECTS</a>
+            <Link to="/projects" className="menu-item hvr-underline-from-left active-page">PROJECTS</Link>
           </li>
           <li>
-            <a href="/index.html#blogs" className="menu-item hvr-underline-from-left">ACHIEVEMENTS</a>
+            <Link to="/#blogs" className="menu-item hvr-underline-from-left">ACHIEVEMENTS</Link>
           </li>
           <li>
-            <a href="/index.html#skills" className="menu-item hvr-underline-from-left">SKILLS</a>
+            <Link to="/#skills" className="menu-item hvr-underline-from-left">SKILLS</Link>
           </li>
         </ul>
 
@@ -43,8 +44,8 @@ const Projects = () => {
             <li className="menu-item">
               <a href="/index.html" className="hvr-underline-from-left item">HOME</a>
             </li>
-            <li className="menu-item">
-              <a href="/index.html#about" className="hvr-underline-from-left item">ABOUT</a>
+            <li>
+              <Link to="/#about" className="menu-item hvr-underline-from-left">ABOUT</Link>
             </li>
             <li className="menu-item">
               <a href="/projects" className="hvr-underline-from-left item">PROJECTS</a>
@@ -66,7 +67,7 @@ const Projects = () => {
         <div className="wrapper">
           {/* Repeatable Project Blocks */}
           {/* Copy the JSX from each project block below and update the content if needed */}
-          
+
           {/* Example Project Block */}
           {[
             {
