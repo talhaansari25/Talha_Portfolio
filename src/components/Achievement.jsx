@@ -104,30 +104,7 @@ const Achievement = () => {
         <div className="blog-wrapper">
           <div className="blog-title">
             <h3 id="ac">{achievementsData.title}</h3>
-            
-            {/* Optional Filter Buttons */}
-            {/* <div className="achievement-filters">
-              <button 
-                className={activeFilter === "all" ? "active" : ""}
-                onClick={() => setActiveFilter("all")}
-              >
-                All
-              </button>
-              <button 
-                className={activeFilter === "hackathon" ? "active" : ""}
-                onClick={() => setActiveFilter("hackathon")}
-              >
-                Hackathons
-              </button>
-              <button 
-                className={activeFilter === "award" ? "active" : ""}
-                onClick={() => setActiveFilter("award")}
-              >
-                Awards
-              </button>
-            </div> */}
           </div>
-
           <div className="slide-container swiper">
             <div className="slide-content">
               <div className="card-wrapper swiper-wrapper">
