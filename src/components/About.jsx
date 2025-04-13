@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../style.css";
 
 const About = () => {
@@ -10,8 +10,7 @@ const About = () => {
       paragraphs: [
         "I’m Mohd Talha Ansari, a dedicated CSE (AI & ML) student passionate about MERN stack development, machine learning integration, and solving DSA problems in C++. I have experience building software using React, Node.js, MongoDB, Flask and Python, and I'm skilled in developing and integrating Database and robust APIs working within the MVC framework.",
         "I have participated in 10+ national-level hackathons, including securing a Top 3 position at SIH 2024, Runner-Up at CodeChef's Blue Bit 2.0 Hackathon, and a Top 12 finish at IIT Bombay's LogiThon Hackathon.",
-        "I'm currently serving as the Webmaster Officer at IEEE GHRCEM Pune, where I manage and update the website, promote events, and maintain technical content. I also lead technical initiatives, support knowledge sharing, and enhance industry-academia engagement within the community.",
-        "All in all, I'm a tech enthusiast pursuing a B.Tech in Computer Engineering with a focus on AI & ML at GH Raisoni College of Engineering & Management, Pune. I'm passionate about continuous learning and skill development."
+        "I'm currently serving as the Webmaster Officer at IEEE GHRCEM Pune, where I manage and update the website, promote events, and maintain technical content. I also lead technical initiatives, support knowledge sharing, and enhance industry-academia engagement within the community. All in all, I'm passionate about continuous learning and skill development."
       ]
     },
     resume: {
@@ -19,6 +18,12 @@ const About = () => {
       fileName: "MOHD-Talha-RESUME.pdf",
       buttonText: "DOWNLOAD MY RESUME"
     }
+  };
+
+  const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
+
+  const handleReadMoreClick = () => {
+    setIsReadMoreVisible(true);
   };
 
   return (
@@ -32,10 +37,24 @@ const About = () => {
             <p className="my-story">{aboutData.intro.title}</p>
             <h2 className="who-am-i">{aboutData.intro.heading}</h2>
             <div className="about-para">
-              {aboutData.intro.paragraphs.map((paragraph, index) => (
+              {aboutData.intro.paragraphs.slice(0, 2).map((paragraph, index) => (
                 <p key={`para-${index}`} className={index === 0 ? "first-para" : ""}>
                   {paragraph}
-                  {index < aboutData.intro.paragraphs.length - 1 && <br />}
+                  {index < 1 && <br />}
+                </p>
+              ))}
+              {!isReadMoreVisible && (
+                <button 
+                  onClick={handleReadMoreClick} 
+                  className="read-more-btn"
+                >
+                  Read More
+                </button>
+              )}
+              {isReadMoreVisible && aboutData.intro.paragraphs.slice(2).map((paragraph, index) => (
+                <p key={`para-${index + 2}`}>
+                  {paragraph}
+                  {index < aboutData.intro.paragraphs.length - 3 && <br />}
                 </p>
               ))}
             </div>
