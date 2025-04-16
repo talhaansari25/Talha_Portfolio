@@ -54,23 +54,28 @@ const Education = () => {
         <div className="education-cards">
           {educationData.map((edu, index) => (
             <div 
-              key={edu.id}
-              className="education-card"
-              data-aos="fade-left"
-              data-aos-delay={300 + (index * 100)}
-            >
-              <div className="card-content">
-                <h3 className="card-title">{edu.title}</h3>
-                <p className="card-institute">{edu.institute}</p>
-                <p className="card-date">
-                  <FaCalendarAlt className="card-icon" /> {edu.date}
-                </p>
-              </div>
-              <div className="card-score">
-                <p className="card-label"><FaUserGraduate /> {edu.scoreLabel}</p>
-                <p className="card-value">{edu.scoreValue}</p>
-              </div>
+            key={edu.id}
+            className="education-card"
+            data-aos="fade-left"
+            data-aos-delay={300 + (index * 100)}
+          >
+            <div className="card-left">
+              <h3 className="card-title">{edu.title}</h3>
+              <p className="card-institute">{edu.institute}</p>
+              <p className="card-institute">{edu.school}</p>
+              <p className="card-date">
+                <FaCalendarAlt className="card-icon" />
+                {edu.date}
+              </p>
             </div>
+            <div className="card-right">
+              <p className="card-label">
+                <FaUserGraduate /> {edu.scoreLabel}
+              </p>
+              <p className="card-value">{edu.scoreValue}</p>
+            </div>
+          </div>
+          
           ))}
         </div>
       </div>
