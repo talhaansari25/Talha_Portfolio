@@ -16,13 +16,13 @@ const Main = () => {
     return (
         <section id="home" data-aos="fade-up">
             <div className="overlay"></div>
-    
+
             {/* Navbar */}
             <nav className="nav">
                 <Link to="/">
                     <img src="/favicon/TA.png" alt="logo" className="logo" />
                 </Link>
-        
+
                 <ul className="menu desktop-menu">
                     <li>
                         <Link to="/" className="menu-item hvr-underline-from-left active-page">HOME</Link>
@@ -43,18 +43,18 @@ const Main = () => {
                         <a href="#skills" className="menu-item hvr-underline-from-left">SKILLS</a>
                     </li>
                 </ul>
-        
+
                 {/* Toggle icon */}
-                <i 
-                    className="bi bi-list" 
+                <i
+                    className="bi bi-list"
                     id="toggle-menu"
                     onClick={toggleMobileMenu}
                 ></i>
-        
+
                 {/* Mobile menu */}
                 <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`}>
-                    <i 
-                        className="bi bi-x" 
+                    <i
+                        className="bi bi-x"
                         id="close-btn"
                         onClick={closeMobileMenu}
                     ></i>
@@ -80,7 +80,7 @@ const Main = () => {
                     </ul>
                 </div>
             </nav>
-    
+
             {/* Hero Section */}
             <div className="hero">
                 <div className="hero-items">
@@ -90,6 +90,16 @@ const Main = () => {
                         KNOW MORE
                         <i className="fa-solid fa-circle-chevron-right"></i>
                     </a>
+                </div>
+                <div className="hero-image" data-aos="fade-up">
+                    <img
+                        src="/images/talha.jpg"
+                        alt="talhaansari"
+                        onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = "https://via.placeholder.com/150"; // Fallback image
+                        }}
+                    />
                 </div>
             </div>
         </section>
