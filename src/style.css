@@ -104,6 +104,7 @@ html {
   margin-top: 8px;
   animation: marquee 40s linear infinite;
 }
+
 .item-collection-1 {
   position: relative;
   left: 0%;
@@ -124,16 +125,19 @@ html {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
 
 @keyframes swap {
+
   0%,
   50% {
     left: 0%;
   }
+
   50.01%,
   100% {
     left: 100%;
@@ -253,6 +257,7 @@ h1::selection {
 }
 
 @media only screen and (max-width: 1100px) {
+
   .custom__cursor__inner,
   .custom__cursor__outer {
     display: none;
@@ -285,9 +290,10 @@ h1::selection {
     justify-content: space-between;
     padding: 0 20px;
     align-items: center;
-    z-index: 999; /* 👈 increase this */
+    z-index: 999;
+    /* 👈 increase this */
   }
-  
+
 
   /* toggle-menu */
   #toggle-menu {
@@ -375,11 +381,9 @@ h1::selection {
   }
 
   .menu-items li a:hover {
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue)
-    );
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.5s ease;
@@ -391,13 +395,15 @@ h1::selection {
     /* padding-top: 25px; */
     text-transform: uppercase;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
     transition: all 0.5s ease;
     margin-bottom: 0;
-  padding-bottom: 0.5rem; /* or less if needed */
-    
+    padding-bottom: 0.5rem;
+    /* or less if needed */
+
   }
 
   .hero-items {
@@ -411,7 +417,7 @@ h1::selection {
     margin-right: 0px;
   }
 
-  .hero-img lottie-player {
+  .hero-image {
     width: 400px !important;
     height: 400px !important;
   }
@@ -434,12 +440,10 @@ h1::selection {
   }
 
   .hero-name {
-    font-size: 40px;
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue)
-    );
+    font-size: 70px;
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: left;
@@ -467,11 +471,9 @@ h1::selection {
   }
 
   .hero-cta:hover {
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue)
-    );
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.5s ease;
@@ -481,8 +483,9 @@ h1::selection {
 
   .ticker-wrap {
     margin-top: 0;
-    margin-bottom: 1rem; /* you can reduce this to 0.5rem if still too large */
-    
+    margin-bottom: 1rem;
+    /* you can reduce this to 0.5rem if still too large */
+
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -490,7 +493,7 @@ h1::selection {
     padding: 0.5rem 0;
     position: relative;
     z-index: 0;
-   
+
   }
 
   .ticker {
@@ -518,8 +521,10 @@ h1::selection {
     position: relative;
     padding-top: 100px;
     z-index: 1;
-    margin-top: 2rem; /* creates space between ticker and image */
+    margin-top: 2rem;
+    /* creates space between ticker and image */
   }
+
   .about-container {
     height: 100%;
     display: flex;
@@ -556,11 +561,9 @@ h1::selection {
   }
 
   .about-container .about-text .who-am-i {
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue) 50%
-    );
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
@@ -695,11 +698,12 @@ h1::selection {
     height: 1000px;
     background: linear-gradient(100deg, var(--LightBlue), var(--DarkBlue));
     padding-bottom: 40px;
-    padding-top: 80px; /* Or lower value as needed */
+    padding-top: 80px;
+    /* Or lower value as needed */
     margin-top: 0;
   }
 
-  
+
   .slide-container {
     max-width: 100%;
     height: auto;
@@ -709,6 +713,7 @@ h1::selection {
     align-items: center;
     justify-content: center;
   }
+
   .slide-content {
     flex-direction: row-reverse;
     margin: 0 20px;
@@ -719,6 +724,7 @@ h1::selection {
     justify-content: center;
     height: auto;
   }
+
   .card {
     border-radius: 20px;
     background-color: white;
@@ -730,6 +736,7 @@ h1::selection {
     flex-direction: column;
     padding: 20px;
   }
+
   .card-content {
     display: flex;
     align-items: center;
@@ -739,12 +746,14 @@ h1::selection {
     padding: 10px 14px;
     padding-top: 5px;
   }
+
   .card-image {
     position: relative;
     padding: 10px;
     padding-top: 5px;
-    
+
   }
+
   .card-image .card-img {
     height: 100%;
     width: 100%;
@@ -753,16 +762,19 @@ h1::selection {
     margin-top: 5px;
     padding-top: 5px;
   }
+
   .name {
     font-size: 18px;
     font-weight: 500;
     color: #333;
   }
+
   .description {
     font-size: 14px;
     color: #707070;
     text-align: center;
   }
+
   .viewmore-button {
     text-decoration: none;
     font-size: 14px;
@@ -774,6 +786,7 @@ h1::selection {
     border: 1px solid var(--DarkBlue);
     transition: all 0.5s ease;
   }
+
   .viewmore-button:hover {
     color: var(--Black);
     background: linear-gradient(100deg, var(--LightBlue), var(--DarkBlue));
@@ -785,30 +798,36 @@ h1::selection {
     opacity: 50%;
     transition: color 0.3s ease;
   }
+
   .swiper-navBtn:hover {
     color: var(--Black) !important;
     opacity: 100%;
     transition: all 0.3s ease;
   }
+
   .swiper-navBtn::before,
   .swiper-navBtn::after {
     font-size: 35px;
   }
+
   .swiper-button-next {
     right: 0;
   }
+
   .swiper-button-prev {
     left: 0;
   }
+
   .swiper-pagination-bullet {
     background-color: black !important;
     opacity: 1;
   }
+
   .swiper-pagination-bullet-active {
     background-color: #4070f4;
   }
 
- 
+
 
   .blog-container {
     width: 100%;
@@ -836,7 +855,8 @@ h1::selection {
     padding-top: 0;
   }
 
-  .blog-title .blog-title h3, #ac {
+  .blog-title .blog-title h3,
+  #ac {
     font-size: 35px;
     font-weight: 600;
     margin: 0 !important;
@@ -962,15 +982,18 @@ h1::selection {
   }
 
   #skills {
-    padding-top: 100px; /* Exactly below navbar */
+    padding-top: 100px;
+    /* Exactly below navbar */
     padding-bottom: 0;
-    margin-bottom: 0;/* Exactly below navbar */
-    height: auto; /* Recommended: Let content decide height */
+    margin-bottom: 0;
+    /* Exactly below navbar */
+    height: auto;
+    /* Recommended: Let content decide height */
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
 
   .skills-container {
     text-align: center;
@@ -1065,11 +1088,9 @@ h1::selection {
     letter-spacing: 5px;
     font-weight: 600;
     font-size: 18px;
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue) 50%
-    );
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
@@ -1154,6 +1175,106 @@ h1::selection {
     background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue));
     transition: all 0.5s ease;
   }
+
+
+  .education-card {
+    display: flex;
+    justify-content: space-between;
+    background: #f9f6f1;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    height: 220px;
+  }
+
+  .education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue));
+  }
+
+  .card-left {
+    flex: 1;
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .card-institute {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #555;
+  }
+
+  .card-date {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+  }
+
+  .card-icon {
+    margin-right: 6px;
+    color: #888;
+  }
+
+  .card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 120px;
+  }
+
+  .card-label {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .card-label svg {
+    margin-right: 6px;
+    font-size: 14px;
+  }
+
+  .card-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .read-more-btn {
+
+    padding: 6px 14px;
+    color: #12b3eb;
+    font-size: 7px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--Black);
+    background-color: transparent;
+    border: 1px var(--DarkBlue);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+  }
+
+  .read-more-btn:hover {
+    background: linear-gradient(100deg, var(--LightBlue), var(--DarkBlue));
+    color: var(--White);
+    border: none;
+  }
+
 }
 
 
@@ -1161,19 +1282,23 @@ h1::selection {
 @media (max-width: 768px) {
 
   .hero {
-    margin-bottom: 0.8rem; /* Reduce bottom spacing */
+    margin-bottom: 0.8rem;
+    /* Reduce bottom spacing */
     padding-bottom: 0.5rem;
   }
+
   .ticker-wrap {
-    margin-top: 0; /* Pull it up closer to .hero */
+    margin-top: 0;
+    /* Pull it up closer to .hero */
     margin-bottom: 0.5rem;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
   }
-  
+
 
   #blogs {
-    padding-top: 20px !important; /* Try lowering this more */
+    padding-top: 20px !important;
+    /* Try lowering this more */
     /* margin-top: 0 !important; */
     height: auto;
   }
@@ -1190,10 +1315,12 @@ h1::selection {
     padding-top: 0 !important;
     line-height: 1.2;
   }
+
   .blog-wrapper {
     height: auto !important;
     justify-content: flex-start !important;
   }
+
   /* Extra: remove top space from swiper or wrapper if present */
   .blog-container,
   .blog-wrapper {
@@ -1206,6 +1333,88 @@ h1::selection {
     padding-top: 0 !important;
     margin-top: 0 !important;
   }
+
+  .education-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-left,
+  .education-cards {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .education-heading {
+    font-size: 30px;
+  }
+
+  .education-subtext {
+    font-size: 16px;
+  }
+
+  .education-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    position: relative;
+  }
+
+
+
+  .card-score {
+    text-align: left;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-institute,
+  .card-date,
+  .card-label {
+    font-size: 14px;
+  }
+
+  .card-value {
+    font-size: 22px;
+  }
+
+  /* Add animation on hover */
+  .education-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .read-more-btn {
+    width: 34%;
+    max-width: 280px;
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+  .hero {
+    padding: 30px 20px;
+    gap: 25px;
+  flex-direction: column;
+  }
+
+  .hero-image img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-name {
+    font-size: 36px;
+  }
+/* Adjust bounce for mobile */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
 }
 
 
@@ -1230,6 +1439,83 @@ h1::selection {
   .blog-title h3 {
     font-size: 22px;
   }
+
+  .education-heading {
+    font-size: 26px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .education-icon {
+    font-size: 28px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-institute,
+  .card-date,
+  .card-label {
+    font-size: 12px;
+  }
+
+  .card-value {
+    font-size: 18px;
+  }
+
+  .education-section {
+    padding: 30px 15px;
+  }
+
+  .education-cards {
+    gap: 15px;
+  }
+
+  .education-card {
+    padding: 12px;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-score {
+    align-self: flex-end;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-top: 5px;
+  }
+
+  .read-more-btn {
+    font-size: 14px;
+    padding: 7px 16px;
+  }
+
+  .hero {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-name {
+    font-size: 32px;
+  }
+
+  .hero-hello {
+    font-size: 20px;
+  }
+    /* Smaller bounce for very small screens */
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+
 }
 
 
@@ -1242,6 +1528,7 @@ h1::selection {
 }
 
 @media only screen and (min-width: 1100px) {
+
   #toggle-menu,
   .mobile-menu {
     display: none;
@@ -1285,42 +1572,91 @@ h1::selection {
   }
 
   .menu li a:hover {
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue)
-    );
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.5s ease;
   }
 
   .menu li a:active {
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue)
-    );
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.5s ease;
   }
 
-  .hero {
-    animation: 4s ease-out 0s 1 slideInFromTop;
+/* Bounce animation for hero */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Pop-up animation for image hover */
+@keyframes popUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.hero {
+    animation: 
+        6s ease-out 0s 1 slideInFromTop,
+        bounce 5s ease-in-out infinite;
+    /* Your existing hero styles */
     height: 100%;
     text-transform: uppercase;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-  }
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
-  .hero .hero-items {
+.hero .hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Image hover effect */
+.hero .hero-image img:hover {
+    animation: popUp 0.9s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    cursor: pointer;
+}
+.hero-items {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+    flex: 1; /* Takes available space */
+    padding-left: 40px;
+    max-width: 60%; /* Limits text width */
+}
+
+.hero-image {
+    flex-shrink: 0; /* Prevents image from shrinking */
+    margin-left: auto; /* Pushes image to right */
+    padding-right: 40px; /* Optional: Adds right padding */
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
   .hero-hello {
     font-size: 20px;
@@ -1330,21 +1666,20 @@ h1::selection {
   }
 
   .hero-name {
-    font-size: 80px;
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue) 50%
-    );
+    font-size: 70px;
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
     line-height: 109.9%;
   }
 
   .hero-cta {
     display: flex;
-    align-items: center;
+    justify-content: left;
+    /* align-items: center; */
     color: var(--Grey);
     border: none;
     background: none;
@@ -1361,11 +1696,9 @@ h1::selection {
   }
 
   .hero-cta:hover {
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue)
-    );
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.5s ease;
@@ -1379,7 +1712,7 @@ h1::selection {
 
   #about {
     /* height: 900px; */
-    margin-top: 100px; 
+    margin-top: 100px;
   }
 
   .about-container {
@@ -1387,7 +1720,7 @@ h1::selection {
     align-items: center;
     justify-content: center;
     padding: 120px 0px;
-    margin-top: 80px; 
+    margin-top: 80px;
   }
 
   .about-wrapper {
@@ -1418,11 +1751,9 @@ h1::selection {
   }
 
   .about-container .about-text .who-am-i {
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue) 50%
-    );
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
@@ -1565,6 +1896,7 @@ h1::selection {
     flex-direction: row-reverse;
     padding: 40px 0;
   }
+
   .slide-content {
     height: 900px;
     margin: 0 0px;
@@ -1574,18 +1906,25 @@ h1::selection {
     justify-content: center;
     flex-direction: row-reverse;
     height: 100%;
-    padding: 20px 0; /* Adds space for cards to pop up without clipping */
-  overflow: visible !important; /* Allows cards to extend beyond container */
+    padding: 20px 0;
+    /* Adds space for cards to pop up without clipping */
+    overflow: visible !important;
+    /* Allows cards to extend beyond container */
   }
+
   /* Card container styles */
-.card-wrapper {
-  perspective: 1000px; /* Adds depth for 3D effects */
-}
-.swiper-wrapper {
-  perspective: 1200px;
-  align-items: center; /* Centers cards vertically */
-  padding-bottom: 20px; /* Prevents bottom clipping */
-}
+  .card-wrapper {
+    perspective: 1000px;
+    /* Adds depth for 3D effects */
+  }
+
+  .swiper-wrapper {
+    perspective: 1200px;
+    align-items: center;
+    /* Centers cards vertically */
+    padding-bottom: 20px;
+    /* Prevents bottom clipping */
+  }
 
   .card {
     height: 100%;
@@ -1597,13 +1936,20 @@ h1::selection {
     background: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth bounce effect */
-    transform: translateY(0) scale(1); /* Initial state */
-    position: relative; /* Needed for z-index to work */
-    z-index: 1; /* Default stacking order */
-    backface-visibility: hidden; /* Prevents flickering */
-  will-change: transform, box-shadow; /* Optimizes animations */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Smooth bounce effect */
+    transform: translateY(0) scale(1);
+    /* Initial state */
+    position: relative;
+    /* Needed for z-index to work */
+    z-index: 1;
+    /* Default stacking order */
+    backface-visibility: hidden;
+    /* Prevents flickering */
+    will-change: transform, box-shadow;
+    /* Optimizes animations */
   }
+
   .card.swiper-slide {
     height: 100%;
     display: flex;
@@ -1618,14 +1964,16 @@ h1::selection {
     z-index: 1;
     will-change: transform, box-shadow;
     backface-visibility: hidden;
-    margin: 10px 0; /* Space for pop-up */
+    margin: 10px 0;
+    /* Space for pop-up */
   }
+
   .card.swiper-slide:hover {
     transform: translateY(-15px) scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     z-index: 10;
   }
-  
+
   .card img {
     width: 100%;
     border-radius: 12px;
@@ -1633,12 +1981,13 @@ h1::selection {
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     transform-origin: center bottom;
   }
+
   .card.swiper-slide:hover .card-img {
     transform: scale(1.03);
   }
-  
-  
-  
+
+
+
   .card-content {
     height: 100%;
     display: flex;
@@ -1646,30 +1995,33 @@ h1::selection {
     justify-content: space-between;
     flex-grow: 1;
     padding: 10px 14px;
-    transform: translateZ(0); /* Forces hardware acceleration */
-  transition: inherit; /* Inherits the parent's transition */
+    transform: translateZ(0);
+    /* Forces hardware acceleration */
+    transition: inherit;
+    /* Inherits the parent's transition */
   }
+
   .card:hover .card-content {
     transform: translateY(-15px);
   }
-  
+
   /* Optional: Enhance the effect */
   .card:hover .card-content h2 {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
   .card:hover .card-content .description {
     transform: scale(1.03);
     transition: transform 0.3s ease-out;
   }
-  
+
   .card-content h2 {
     font-size: 18px;
     text-align: center;
     margin: 10px;
     margin-top: 10px;
   }
-  
+
   .description {
     font-size: 14px;
     color: #707070;
@@ -1684,33 +2036,35 @@ h1::selection {
 
   .card:hover {
     transform: translateY(-20px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  z-index: 10;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 10;
   }
-  
+
   /* Ensure the transition is smooth */
-  .card, .card * {
+  .card,
+  .card * {
     transition: all 0.3s ease;
   }
-  
+
   /* Make the image slightly grow on hover */
   .card:hover .card-img {
     transform: scale(1.05);
     transition-delay: 0.1s;
   }
-  
+
   /* Add these to your existing .card-img class */
   .card-img {
     transition: transform 0.3s ease;
     transform-origin: center center;
   }
-  
+
   .view-more {
     margin-top: auto;
     padding-top: 10px;
     justify-content: center;
     align-items: center;
   }
+
   .viewmore-button {
     justify-content: center;
     align-items: center;
@@ -1725,12 +2079,13 @@ h1::selection {
     border: 1px solid var(--DarkBlue);
     transition: all 0.5s ease;
   }
+
   .button-wrapper {
     display: flex;
     justify-content: center;
   }
-  
-  
+
+
   .viewmore-button:hover {
     color: var(--White);
     background: linear-gradient(100deg, var(--LightBlue), var(--DarkBlue));
@@ -1742,27 +2097,33 @@ h1::selection {
     opacity: 50%;
     transition: color 0.3s ease;
   }
+
   .swiper-navBtn:hover {
     color: var(--White) !important;
     opacity: 100%;
     transition: all 0.3s ease;
   }
+
   .swiper-navBtn::before,
   .swiper-navBtn::after {
     font-size: 35px;
     color: #4070f4;
   }
+
   .swiper-button-next {
-    
+
     right: 0;
   }
+
   .swiper-button-prev {
     left: 0;
   }
+
   .swiper-pagination-bullet {
     background-color: white !important;
     opacity: 1;
   }
+
   .swiper-pagination-bullet-active {
     background-color: #4070f4;
   }
@@ -1873,13 +2234,13 @@ h1::selection {
   }
 
   .swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  cursor: pointer;
-}
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+  }
 
 
 
@@ -1936,6 +2297,7 @@ h1::selection {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    overflow: visible;
   }
 
   .skills-header {
@@ -1951,6 +2313,7 @@ h1::selection {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    overflow: visible;
   }
 
   .skill {
@@ -1965,10 +2328,13 @@ h1::selection {
     border-radius: 50%;
     cursor: pointer;
     transform: scale(1);
+    will-change: transform;
     transform-origin: center;
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
   }
-  
+
   .skill:hover {
     box-shadow: 0px 0px 10px 1px #26262680;
     background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue));
@@ -1991,7 +2357,17 @@ h1::selection {
     font-weight: 500;
   }
 
- 
+  .skill:hover .skills-logo,
+  .skill:hover span {
+    transform: translateY(-10px);
+  }
+
+  /* Add transition to logo and text for smooth effect */
+  .skills-logo,
+  .skill span {
+    transition: transform 0.3s ease;
+  }
+
 
   footer {
     background: rgb(224, 224, 224);
@@ -2022,11 +2398,9 @@ h1::selection {
     letter-spacing: 5px;
     font-weight: 600;
     font-size: 18px;
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--LightBlue),
-      var(--DarkBlue) 50%
-    );
+    background: -webkit-linear-gradient(0deg,
+        var(--LightBlue),
+        var(--DarkBlue) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
@@ -2098,31 +2472,54 @@ h1::selection {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.3s ease, border 0.3s ease;
+    cursor: pointer;
   }
 
-  .socialbtns ul li a {
-    border-radius: inherit;
+  .socialbtns ul li a i {
+    font-size: 25px;
+    color: var(--Black);
+    transition: transform 0.3s ease, color 0.3s ease;
   }
 
-  .socialbtns a i {
-    text-decoration: none;
+  /* 👇 This makes only the icon move up on hover */
+  .socialbtns ul li:hover a i {
+    transform: translateY(-10px);
+    color: var(--White);
   }
 
+  /* Optional: background gradient on hover */
   .socialbtns ul li:hover {
-    color: white;
     border: none;
     background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue));
-    transition: all 0.5s ease;
   }
+
+  .credit {
+    color: rgb(101, 101, 101);
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: default;
+  }
+
+  .credit:hover {
+    transform: translateY(-5px) scale(1.05);
+    color: var(--DarkBlue);
+  }
+
 
   .education-section {
     padding: 60px 20px;
     background: linear-gradient(to bottom, #e8e8e8, #d4d4d4);
     min-height: 10vh;
-    margin-bottom: 80px; /* ⬅️ Add this line */
+    margin-bottom: 80px;
   }
-  
-  
+
   .education-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -2132,11 +2529,11 @@ h1::selection {
     align-items: flex-start;
     justify-content: space-between;
   }
-  
+
   .education-left {
     flex: 1 1 40%;
   }
-  
+
   .education-heading {
     font-size: 36px;
     font-weight: 700;
@@ -2145,45 +2542,45 @@ h1::selection {
     align-items: center;
     gap: 15px;
   }
-  
+
   .education-icon {
     font-size: 36px;
     color: #444;
   }
-  
+
   .education-line {
     width: 80px;
     border: 1px solid #aaa;
     margin: 10px 0;
   }
-  
+
   .education-subtext {
     font-size: 18px;
     color: #444;
     max-width: 90%;
     line-height: 1.6;
   }
-  
+
   .education-cards {
     flex: 1 1 55%;
     display: flex;
     flex-direction: column;
     gap: 25px;
+    transition: all 0.3s ease;
   }
-  
+
   .education-card {
     background: #f7f4ef;
     border-radius: 12px;
     padding: 20px 25px;
     box-shadow: 0px 0px 10px 1px hsla(0, 0%, 15%, 0.5);
     transition: all 0.3s ease;
-    border-radius: 10px;
-    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
   }
+
   .education-card:hover {
     background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue));
     transform: scale(1.05);
@@ -2191,28 +2588,39 @@ h1::selection {
     cursor: pointer;
     transition: all 0.5s ease;
   }
+
   .education-card:hover * {
     color: var(--White);
     transition: color 0.3s ease;
   }
-  
+
+  .education-card .card-content,
+  .education-card .card-score {
+    transition: transform 0.3s ease;
+  }
+
+  .education-card:hover .card-content,
+  .education-card:hover .card-score {
+    transform: scale(1.05);
+  }
+
   .card-content {
     flex-grow: 1;
   }
-  
+
   .card-title {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 5px;
     color: #2b2b2b;
   }
-  
+
   .card-institute {
     color: #555;
     margin-bottom: 8px;
     font-size: 15px;
   }
-  
+
   .card-date {
     color: #777;
     font-size: 14px;
@@ -2220,15 +2628,15 @@ h1::selection {
     align-items: center;
     gap: 8px;
   }
-  
+
   .card-icon {
     color: #888;
   }
-  
+
   .card-score {
     text-align: right;
   }
-  
+
   .card-label {
     font-size: 13px;
     color: #777;
@@ -2237,12 +2645,14 @@ h1::selection {
     justify-content: flex-end;
     gap: 5px;
   }
-  
+
   .card-value {
     font-size: 24px;
     font-weight: bold;
     color: #333;
   }
+
+
 
   .read-more-btn {
     color: var(--LightBlue);
@@ -2253,11 +2663,11 @@ h1::selection {
     text-decoration: underline;
     transition: all 0.3s ease;
   }
-  
+
   .read-more-btn:hover {
-    
+
     color: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue));
   }
-  
-  
+
+
 }
