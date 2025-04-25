@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Footer = () => {
-  // Initialize AOS animation when component mounts
+ 
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -13,13 +13,13 @@ const Footer = () => {
       mirror: false
     });
     
-    // Refresh AOS when component updates
+   
     return () => {
       AOS.refresh();
     };
   }, []);
 
-  // Social media data
+ 
   const socialLinks = [
     {
       name: "LinkedIn",
