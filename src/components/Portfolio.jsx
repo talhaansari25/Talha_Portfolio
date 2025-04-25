@@ -31,8 +31,8 @@ const Portfolio = () => {
       className: "uiux",
       link: "/handles",
       iconClass: "github-logo fa-brands fa-github",
-      title: "Social handles",
-      description: "My Social Portfolio",
+      title: "Handles",
+      description: "My Social Portfolios",
       animation: "fade-up",
       delay: 300
     }

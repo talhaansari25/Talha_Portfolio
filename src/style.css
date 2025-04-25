@@ -610,8 +610,8 @@ h1::selection {
   }
 
   .portfolio-container .portfolio-wrapper .uiux {
-    /* height: 424px; */
-    /* width: 300px; */
+    /* height: 424px; 
+     width: 300px; */
     /* background: var(--White); */
     border-radius: 10px;
     /* border: 1px solid var(--White); */
@@ -1786,7 +1786,7 @@ h1::selection {
     height: 900px;
     /* background: linear-gradient(100deg, var(--LightBlue), var(--DarkBlue)); */
   }
-
+  
   .portfolio-container {
     height: 100%;
     width: 100%;
@@ -1794,39 +1794,29 @@ h1::selection {
     align-items: center;
     justify-content: center;
   }
-
+  
   .portfolio-wrapper {
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
-  .portfolio-container .portfolio-wrapper .uiux {
-    /* height: 424px;
-    width: 300px; */
-    /* background: var(--White); */
-    border-radius: 10px;
-    /* border: 1px solid var(--White); */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    transition: all 0.3s;
-  }
-
+  
+  /* Added fixed width for both card types */
+  .portfolio-container .portfolio-wrapper .uiux,
   .portfolio-container .portfolio-wrapper .webdev {
-    /* height: 424px; */
-    /* width: 300px; */
-    /* background: var(--White); */
+    width: 48%; /* Adjusted to fit side by side with space-between */
+    min-width: 400px; /* Minimum width to ensure consistency */
+   
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     transition: all 0.3s;
+    box-sizing: border-box; /* Ensures padding is included in width */
   }
-
+  
   .portfolio-container .portfolio-wrapper .card-text {
     display: flex;
     flex-direction: column;
@@ -1834,22 +1824,22 @@ h1::selection {
     justify-content: center;
     gap: 10px;
   }
-
+  
   .portfolio-container .portfolio-wrapper .uiux i,
   .portfolio-container .portfolio-wrapper .webdev i {
     font-size: 60px;
   }
-
+  
   .figma-logo:hover,
   .github-logo:hover {
     color: var(--White);
     transition: all 0.3s;
   }
-
+  
   .portfolio-container .portfolio-wrapper .card-title {
     font-size: 40px;
   }
-
+  
   .portfolio-container .portfolio-wrapper .card-view {
     display: flex;
     align-items: center;
@@ -1858,31 +1848,33 @@ h1::selection {
     gap: 20px;
     text-decoration: none;
     font-size: 16px;
-    padding: 100px 140px;
+    padding: 100px 60px; /* Adjusted padding to fit better */
+    width: 100%; /* Takes full width of parent */
     border-radius: 10px;
     border: 1px solid var(--LightBlue);
     color: var(--Black);
     transition: all 0.3s;
+    box-sizing: border-box; /* Ensures padding is included in width */
   }
-
+  
   .portfolio-container .portfolio-wrapper .card-view:hover {
     background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue));
     color: var(--White);
     transition: all 0.3s;
   }
-
+  
   .uiux,
   .webdev {
     box-shadow: 0px 0px 10px 1px hsla(0, 0%, 15%, 0.5);
   }
-
+  
   .uiux:hover {
     background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue));
     transform: scale(1.1);
     transition: all 0.5s;
     cursor: pointer;
   }
-
+  
   .webdev:hover {
     background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue));
     transform: scale(1.1);

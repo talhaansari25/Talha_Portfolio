@@ -614,7 +614,7 @@
   
     .one-img{
       width: 500px;
-      height: 250px;
+      /* height: 250px; */
       flex-shrink: 0;
       overflow: hidden;
       position: relative;
@@ -690,7 +690,7 @@
   }
     .two-img{
       width: 500px;
-      height: 250px;
+      /* height: 250px; */
       flex-shrink: 0;
       overflow: hidden;
       position: relative;
