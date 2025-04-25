@@ -91,13 +91,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/main" element={<Main/>} />
-            {/* <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/achievement" element={<Achievement />} />
-            <Route path="/portfolio" element={<Portfolio />} /> */}
             <Route path="/projects" element={<Projects />} />
             <Route path="/handles" element={<Handles />} />
-            {/* <Route path="/footer" element={<Footer />} /> */}
           </Routes>
         </>
       )}
