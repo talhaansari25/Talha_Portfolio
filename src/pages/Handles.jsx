@@ -5,10 +5,17 @@ import "../handles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
+// Importing images from the root src/images folder
+import LL from "/images/LL.png";
+import GTH from "/images/gth.png";
+import LC from "/images/LC.png";
+import US from "/images/us.webp";
+import IST from "/images/Ist.png";
+
 const socialHandles = [
   {
     title: "LINKEDIN",
-    img: "LL.png",
+    img: LL,
     description: `LinkedIn is my go-to platform for career growth, networking, job searching and sharing professional updates.
     I use LinkedIn to showcase my skills, projects, activities and achievements to enhance my visibility & build credibility and connect with industry experts.
     Connect with me on LinkedIn!`,
@@ -16,7 +23,7 @@ const socialHandles = [
   },
   {
     title: "GITHUB",
-    img: "gth.png",
+    img: GTH,
     description: `GitHub is a platform where I actively share my projects, make repositories, and contribute through commits.
     I use it to collaborate, contribute to open source, improve my coding skills, and engage with the developer community.
     Check out my work on GitHub!`,
@@ -24,7 +31,7 @@ const socialHandles = [
   },
   {
     title: "LEETCODE",
-    img: "LC.png",
+    img: LC,
     description: `LeetCode is a platform where I enhance my problem-solving skills majorly in C++ by solving Data Structures & Algorithms problems.
     I've solved over 100+ problems across arrays, linked lists, backtracking, strings, and recursion etc.
     Explore my DSA journey on LeetCode!`,
@@ -32,7 +39,7 @@ const socialHandles = [
   },
   {
     title: "UNSTOP",
-    img: "us.webp",
+    img: US,
     description: `Unstop is a platform where I participate in competitions and hackathons. These experiences allow me to tackle real-world challenges and sharpen my problem-solving abilities.
     Through team collaborations and industry interactions, I develop leadership, strategy, and networking skills.
     Follow my journey on Unstop!`,
@@ -40,7 +47,7 @@ const socialHandles = [
   },
   {
     title: "INSTAGRAM",
-    img: "Ist.png",
+    img: IST,
     description: `Instagram is my space for personal interests and casual content beyond my professional life.
     It’s where I share moments, hobbies, and experiences in a more relaxed way.
     Connect with me on Instagram!`,
@@ -50,7 +57,6 @@ const socialHandles = [
 
 const Handles = () => {
   useEffect(() => {
-    // ✅ Mobile menu toggle
     const toggleMenuBtn = document.querySelector("#toggle-menu");
     const closeMenuBtn = document.querySelector("#close-btn");
     const mobileMenu = document.querySelector(".mobile-menu");
@@ -70,7 +76,6 @@ const Handles = () => {
     closeMenuBtn?.addEventListener("click", closeMenu);
     overlay?.addEventListener("click", closeMenu);
 
- 
     const targetId = localStorage.getItem("scrollTo");
     if (targetId) {
       const targetEl = document.getElementById(targetId);
@@ -91,7 +96,6 @@ const Handles = () => {
 
   return (
     <>
-      
       <div className="overlay"></div>
 
       <nav className="nav">
@@ -102,33 +106,15 @@ const Handles = () => {
         <ul className="menu desktop-menu">
           <li><Link to="/" className="menu-item hvr-underline-from-left">HOME</Link></li>
           <li>
-            <Link
-              to="/"
-              className="menu-item hvr-underline-from-left"
-              onClick={() => localStorage.setItem("scrollTo", "about")}
-            >
-              ABOUT
-            </Link>
+            <Link to="/" className="menu-item hvr-underline-from-left" onClick={() => localStorage.setItem("scrollTo", "about")}>ABOUT</Link>
           </li>
           <li><Link to="/handles" className="menu-item hvr-underline-from-left active-page">PROFILES</Link></li>
-          <li><Link to="/projects" className="menu-item hvr-underline-from-left ">PROJECTS</Link></li>
+          <li><Link to="/projects" className="menu-item hvr-underline-from-left">PROJECTS</Link></li>
           <li>
-            <Link
-              to="/"
-              className="menu-item hvr-underline-from-left"
-              onClick={() => localStorage.setItem("scrollTo", "blogs")}
-            >
-              ACHIEVEMENTS
-            </Link>
+            <Link to="/" className="menu-item hvr-underline-from-left" onClick={() => localStorage.setItem("scrollTo", "blogs")}>ACHIEVEMENTS</Link>
           </li>
           <li>
-            <Link
-              to="/"
-              className="menu-item hvr-underline-from-left"
-              onClick={() => localStorage.setItem("scrollTo", "skills")}
-            >
-              SKILLS
-            </Link>
+            <Link to="/" className="menu-item hvr-underline-from-left" onClick={() => localStorage.setItem("scrollTo", "skills")}>SKILLS</Link>
           </li>
         </ul>
 
@@ -138,35 +124,11 @@ const Handles = () => {
           <i className="bi bi-x" id="close-btn"></i>
           <ul className="menu menu-items">
             <li><Link to="/" className="hvr-underline-from-left item">HOME</Link></li>
-            <li>
-              <Link
-                to="/"
-                className="hvr-underline-from-left item"
-                onClick={() => localStorage.setItem("scrollTo", "about")}
-              >
-                ABOUT
-              </Link>
-            </li>
+            <li><Link to="/" className="hvr-underline-from-left item" onClick={() => localStorage.setItem("scrollTo", "about")}>ABOUT</Link></li>
             <li><Link to="/handles" className="hvr-underline-from-left item active-page">HANDLES</Link></li>
             <li><Link to="/projects" className="hvr-underline-from-left item">PROJECTS</Link></li>
-            <li>
-              <Link
-                to="/"
-                className="hvr-underline-from-left item"
-                onClick={() => localStorage.setItem("scrollTo", "blogs")}
-              >
-                ACHIEVEMENTS
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                className="hvr-underline-from-left item"
-                onClick={() => localStorage.setItem("scrollTo", "skills")}
-              >
-                SKILLS
-              </Link>
-            </li>
+            <li><Link to="/" className="hvr-underline-from-left item" onClick={() => localStorage.setItem("scrollTo", "blogs")}>ACHIEVEMENTS</Link></li>
+            <li><Link to="/" className="hvr-underline-from-left item" onClick={() => localStorage.setItem("scrollTo", "skills")}>SKILLS</Link></li>
           </ul>
         </div>
       </nav>
@@ -176,12 +138,12 @@ const Handles = () => {
           {socialHandles.map((handle, idx) => (
             <div className={idx % 2 === 0 ? "one" : "two"} key={idx}>
               <div className={idx % 2 === 0 ? "one-img" : "two-img"}>
-                <img src={`/images/${handle.img}`} alt="project-thumbnail" />
+                <img src={handle.img} alt="profile-thumbnail" />
               </div>
               <div className={idx % 2 === 0 ? "one-text" : "two-text"}>
                 <h3 className="title">{handle.title}</h3>
                 <p className="detail">{handle.description}</p>
-                <a href={handle.link}>LINK &gt;</a>
+                <a href={handle.link} target="_blank" rel="noopener noreferrer">LINK &gt;</a>
               </div>
             </div>
           ))}
