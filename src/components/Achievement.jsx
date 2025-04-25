@@ -9,7 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Achievement = () => {
-  // Achievement data in JSON format
+ 
   const achievementsData = {
     title: "MY ACHIEVEMENTS",
     cards: [
@@ -61,10 +61,10 @@ const Achievement = () => {
     ]
   };
 
-  // State for active filter
+
   const [activeFilter, setActiveFilter] = useState("all");
   
-  // Initialize AOS and Swiper
+ 
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -121,7 +121,7 @@ const Achievement = () => {
                           src={card.image} 
                           alt={card.alt} 
                           className="card-img"
-                          loading="lazy" // Lazy loading for better performance
+                          loading="lazy" 
                         />
                       </div>
                     </div>
