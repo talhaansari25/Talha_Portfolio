@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Education = () => {
-  // Initialize animations
+  
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -15,7 +15,7 @@ const Education = () => {
     });
   }, []);
 
-  // Education data in JSON format
+ 
   const educationData = [
     {
       id: 1,
