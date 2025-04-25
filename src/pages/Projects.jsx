@@ -1,41 +1,54 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import "../projects.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Projects = () => {
   useEffect(() => {
-    // ✅ Manually trigger the carousel to start sliding when the page loads
+    // ✅ Start carousel automatically
     const carousels = document.querySelectorAll('.carousel');
     carousels.forEach(carousel => {
       new window.bootstrap.Carousel(carousel, {
-        interval: 2000,  // Set the interval for auto-scrolling (2 seconds)
-        ride: 'carousel',  // Ensure the carousel starts automatically
-        pause: false, // Keep sliding even on hover
+        interval: 2000,
+        ride: 'carousel',
+        pause: false,
       });
     });
-  
-    // ✅ Mobile menu toggle logic
+
+    // ✅ Mobile menu toggle
     const toggleMenuBtn = document.querySelector("#toggle-menu");
     const closeMenuBtn = document.querySelector("#close-btn");
     const mobileMenu = document.querySelector(".mobile-menu");
     const overlay = document.querySelector(".overlay");
-  
+
     const openMenu = () => {
       mobileMenu?.classList.add("active");
       overlay?.classList.add("active");
     };
-  
+
     const closeMenu = () => {
       mobileMenu?.classList.remove("active");
       overlay?.classList.remove("active");
     };
-  
+
     toggleMenuBtn?.addEventListener("click", openMenu);
     closeMenuBtn?.addEventListener("click", closeMenu);
-    overlay?.addEventListener("click", closeMenu); // Optional: close sidebar when overlay is clicked
-  
+    overlay?.addEventListener("click", closeMenu);
+
+    // ✅ Scroll to section from another route
+    const targetId = localStorage.getItem("scrollTo");
+    if (targetId) {
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        setTimeout(() => {
+          targetEl.scrollIntoView({ behavior: "smooth" });
+          localStorage.removeItem("scrollTo");
+        }, 300);
+      }
+    }
+
     return () => {
       toggleMenuBtn?.removeEventListener("click", openMenu);
       closeMenuBtn?.removeEventListener("click", closeMenu);
@@ -44,37 +57,89 @@ const Projects = () => {
   }, []);
   
   
+  
 
   return (
     <>
       
-      <div className="custom__cursor__outer"></div>
-      <div className="custom__cursor__inner"></div>
+      
       <div className="overlay"></div>
 
       
+    
       <nav className="nav">
-        <a href="/">
-          <img src="/favicon/TA.png" alt="" className="logo" />
-        </a>
+        <Link to="/">
+          <img src="/favicon/TA.png" alt="Logo" className="logo" />
+        </Link>
+
         <ul className="menu desktop-menu">
-          <li><a href="/" className="menu-item hvr-underline-from-left">HOME</a></li>
-          <li><a href="/#about" className="menu-item hvr-underline-from-left">ABOUT</a></li>
-          <li><a href="/handles" className="menu-item hvr-underline-from-left active-page">PROFILES</a></li>
-          <li><a href="/projects" className="menu-item hvr-underline-from-left">PROJECTS</a></li>
-          <li><a href="/#blogs" className="menu-item hvr-underline-from-left">ACHIEVEMENTS</a></li>
-          <li><a href="/#skills" className="menu-item hvr-underline-from-left">SKILLS</a></li>
+          <li><Link to="/" className="menu-item hvr-underline-from-left">HOME</Link></li>
+          <li>
+            <Link
+              to="/"
+              className="menu-item hvr-underline-from-left"
+              onClick={() => localStorage.setItem("scrollTo", "about")}
+            >
+              ABOUT
+            </Link>
+          </li>
+          <li><Link to="/handles" className="menu-item hvr-underline-from-left">PROFILES</Link></li>
+          <li><Link to="/projects" className="menu-item hvr-underline-from-left active-page">PROJECTS</Link></li>
+          <li>
+            <Link
+              to="/"
+              className="menu-item hvr-underline-from-left"
+              onClick={() => localStorage.setItem("scrollTo", "blogs")}
+            >
+              ACHIEVEMENTS
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              className="menu-item hvr-underline-from-left"
+              onClick={() => localStorage.setItem("scrollTo", "skills")}
+            >
+              SKILLS
+            </Link>
+          </li>
         </ul>
+
         <i className="bi bi-list" id="toggle-menu"></i>
+
         <div className="mobile-menu">
           <i className="bi bi-x" id="close-btn"></i>
           <ul className="menu menu-items">
-            <li><a href="/" className="hvr-underline-from-left item">HOME</a></li>
-            <li><a href="/#about" className="hvr-underline-from-left item">ABOUT</a></li>
-            <li><a href="/handles" className="hvr-underline-from-left item">HANDLES</a></li>
-            <li><a href="/projects" className="hvr-underline-from-left item">PROJECTS</a></li>
-            <li><a href="/#blogs" className="hvr-underline-from-left item">ACHIEVEMENTS</a></li>
-            <li><a href="/#skills" className="hvr-underline-from-left item">SKILLS</a></li>
+            <li><Link to="/" className="hvr-underline-from-left item">HOME</Link></li>
+            <li>
+              <Link
+                to="/"
+                className="hvr-underline-from-left item"
+                onClick={() => localStorage.setItem("scrollTo", "about")}
+              >
+                ABOUT
+              </Link>
+            </li>
+            <li><Link to="/handles" className="hvr-underline-from-left item">HANDLES</Link></li>
+            <li><Link to="/projects" className="hvr-underline-from-left item active-page">PROJECTS</Link></li>
+            <li>
+              <Link
+                to="/"
+                className="hvr-underline-from-left item"
+                onClick={() => localStorage.setItem("scrollTo", "blogs")}
+              >
+                ACHIEVEMENTS
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/"
+                className="hvr-underline-from-left item"
+                onClick={() => localStorage.setItem("scrollTo", "skills")}
+              >
+                SKILLS
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
