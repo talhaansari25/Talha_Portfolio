@@ -70,7 +70,7 @@ const Handles = () => {
     closeMenuBtn?.addEventListener("click", closeMenu);
     overlay?.addEventListener("click", closeMenu);
 
-    // ✅ Scroll to section from another route
+ 
     const targetId = localStorage.getItem("scrollTo");
     if (targetId) {
       const targetEl = document.getElementById(targetId);

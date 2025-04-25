@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../style.css";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // AOS animation styles
+import 'aos/dist/aos.css'; 
 
 const Portfolio = () => {
-  // Initialize AOS animation library
+
   useEffect(() => {
     AOS.init({
       duration: 900,
@@ -14,7 +14,7 @@ const Portfolio = () => {
     });
   }, []);
 
-  // Portfolio items data with individual animation configurations
+
   const portfolioItems = [
     {
       id: 1,

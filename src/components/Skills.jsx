@@ -24,10 +24,10 @@ const Skills = () => {
     { name: "Tailwind", icon: "./icons/tailwind.webp" },
     { name: "Figma", icon: "./icons/figma.webp" },
     { name: "Canva", icon: "./icons/can.webp" },
-    // { name: "Premier Pro", icon: "./icons/premiere.webp" }
+    
   ];
 
-  // Initialize animations
+ 
   useEffect(() => {
     AOS.init({
       duration: 800,

@@ -8,14 +8,20 @@ import 'swiper/css/pagination';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+// Import images
+import SIH from '/images/SIH.jpg';
+import Prax from '/images/prax.jpg';
+import LG from '/images/lg.jpg';
+import QS from '/images/Qs.jpg';
+import NU from '/images/nu.jpg';
+
 const Achievement = () => {
- 
   const achievementsData = {
     title: "MY ACHIEVEMENTS",
     cards: [
       {
         id: 1,
-        image: "images/SIH.jpg",
+        image: SIH,
         alt: "SIH 2024",
         title: "SIH 2024 Grand Finale",
         description: "Top 3 teams at SIH 2024 under Ministry of Railways, facilitated by AICTE Vice Chairman",
@@ -24,7 +30,7 @@ const Achievement = () => {
       },
       {
         id: 2,
-        image: "images/prax.jpg",
+        image: Prax,
         alt: "CodeChef Bluebit",
         title: "CodeChef Bluebit 2.0 Hackathon",
         description: "Runner-Up at Bluebit 2.0 Hackathon at PCCOE Pune, facilitated by IEEE Pune section Chair.",
@@ -33,7 +39,7 @@ const Achievement = () => {
       },
       {
         id: 3,
-        image: "images/lg.jpg",
+        image: LG,
         alt: "Logithon IIT Bombay",
         title: "Logithon x IIT Bombay",
         description: "Top 12 finish at Logithon 2.0 Hackathon held at IIT Bombay organized by Softlink pvt.ltd",
@@ -42,7 +48,7 @@ const Achievement = () => {
       },
       {
         id: 4,
-        image: "images/Qs.jpg",
+        image: QS,
         alt: "Quasar Hackathon",
         title: "Quasar 2.0 Hackathon",
         description: "Top 5 Teams at Quasar 2.0 Hackathon at VPPCOEVA, Mumbai",
@@ -51,7 +57,7 @@ const Achievement = () => {
       },
       {
         id: 5,
-        image: "images/nu.jpg",
+        image: NU,
         alt: "DebugOn IIT Delhi",
         title: "DebugOn X IIT Delhi",
         description: "Finalist at DebugOn X Edc IIT Delhi with ONDC under Ministry of Industry and Internal Trade.",
@@ -61,10 +67,8 @@ const Achievement = () => {
     ]
   };
 
-
   const [activeFilter, setActiveFilter] = useState("all");
-  
- 
+
   useEffect(() => {
     AOS.init({
       duration: 800,

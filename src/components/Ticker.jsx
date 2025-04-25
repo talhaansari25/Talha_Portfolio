@@ -15,6 +15,7 @@ const Ticker = () => {
             <span className="item">C/C++ </span>
             <span className="item">Python </span>
             <span className="item">Java </span>
+            <span className="item">Git & GitHub</span>
           </span>
           <span className="item-collection-2">
             <span className="item">Full Stack Web Development</span>
@@ -24,6 +25,7 @@ const Ticker = () => {
             <span className="item">C/C++ </span>
             <span className="item">Python </span>
             <span className="item">Java </span>
+            <span className="item">Git & GitHub</span>
           </span>
         </div>
       </div>

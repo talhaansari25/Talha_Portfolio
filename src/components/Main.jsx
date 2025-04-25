@@ -99,7 +99,7 @@ const Main = () => {
                         alt="talhaansari"
                         onError={(e) => {
                             e.target.onerror = null;
-                            e.target.src = "https://via.placeholder.com/150"; // Fallback image
+                            e.target.src = "https://via.placeholder.com/150"; 
                         }}
                     />
                 </div>

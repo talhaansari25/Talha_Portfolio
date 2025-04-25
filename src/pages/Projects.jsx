@@ -7,7 +7,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Projects = () => {
   useEffect(() => {
-    // ✅ Start carousel automatically
+
     const carousels = document.querySelectorAll('.carousel');
     carousels.forEach(carousel => {
       new window.bootstrap.Carousel(carousel, {
@@ -17,7 +17,7 @@ const Projects = () => {
       });
     });
 
-    // ✅ Mobile menu toggle
+    //  Mobile menu toggle
     const toggleMenuBtn = document.querySelector("#toggle-menu");
     const closeMenuBtn = document.querySelector("#close-btn");
     const mobileMenu = document.querySelector(".mobile-menu");
@@ -37,7 +37,7 @@ const Projects = () => {
     closeMenuBtn?.addEventListener("click", closeMenu);
     overlay?.addEventListener("click", closeMenu);
 
-    // ✅ Scroll to section from another route
+
     const targetId = localStorage.getItem("scrollTo");
     if (targetId) {
       const targetEl = document.getElementById(targetId);
@@ -55,18 +55,18 @@ const Projects = () => {
       overlay?.removeEventListener("click", closeMenu);
     };
   }, []);
-  
-  
-  
+
+
+
 
   return (
     <>
-      
-      
+
+
       <div className="overlay"></div>
 
-      
-    
+
+
       <nav className="nav">
         <Link to="/">
           <img src="/favicon/TA.png" alt="Logo" className="logo" />
@@ -184,66 +184,66 @@ Using Transformer T5 for lecture summarization and LLaVA for Q&A and assessments
 Check out my work on GitHub!`,
             github: "https://www.github.com/talhaansari25/IRIS-AI_Powered_Educational_Platform-"
           }]
-          .map((project, idx) => (
-            <div className={idx % 2 === 0 ? "one" : "two"} key={idx}>
-              <div className={idx % 2 === 0 ? "one-img" : "two-img"}>
-                {/* Carousel Setup with Auto-Swipe and Custom Interval */}
-                <div
-                  id={`carouselExample${idx}`}
-                  className="carousel slide carousel-fade"
-                  data-bs-ride="carousel"
-                  data-bs-interval="2000"  
-                >
-                  <div className="carousel-inner">
-                    {project.images.map((img, i) => (
-                      <div
-                        className={`carousel-item ${i === 0 ? "active" : ""}`}
-                        key={i}
-                      >
-                        <img
-                          src={`/images/${img}`}
-                          className="d-block w-100"
-                          alt={`Slide ${i + 1}`}
-                        />
-                      </div>
-                    ))}
+            .map((project, idx) => (
+              <div className={idx % 2 === 0 ? "one" : "two"} key={idx}>
+                <div className={idx % 2 === 0 ? "one-img" : "two-img"}>
+
+                  <div
+                    id={`carouselExample${idx}`}
+                    className="carousel slide carousel-fade"
+                    data-bs-ride="carousel"
+                    data-bs-interval="2000"
+                  >
+                    <div className="carousel-inner">
+                      {project.images.map((img, i) => (
+                        <div
+                          className={`carousel-item ${i === 0 ? "active" : ""}`}
+                          key={i}
+                        >
+                          <img
+                            src={`/images/${img}`}
+                            className="d-block w-100"
+                            alt={`Slide ${i + 1}`}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <button
+                      className="carousel-control-prev"
+                      type="button"
+                      data-bs-target={`#carouselExample${idx}`}
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        className="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      className="carousel-control-next"
+                      type="button"
+                      data-bs-target={`#carouselExample${idx}`}
+                      data-bs-slide="next"
+                    >
+                      <span
+                        className="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Next</span>
+                    </button>
                   </div>
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target={`#carouselExample${idx}`}
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target={`#carouselExample${idx}`}
-                    data-bs-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
+                </div>
+                <div className={idx % 2 === 0 ? "one-text" : "two-text"}>
+                  <h3 className="title">{project.title}</h3>
+                  <p className="detail" style={{ whiteSpace: "pre-line" }}>
+                    {project.description}
+                  </p>
+
+                  <a href={project.github}>LINK &gt;</a>
                 </div>
               </div>
-              <div className={idx % 2 === 0 ? "one-text" : "two-text"}>
-                <h3 className="title">{project.title}</h3>
-                <p className="detail" style={{ whiteSpace: "pre-line" }}>
-                  {project.description}
-                </p>
-
-                <a href={project.github}>LINK &gt;</a>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </>
