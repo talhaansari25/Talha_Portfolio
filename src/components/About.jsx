@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "../style.css";
 
 const About = () => {
-  // Data stored in a more manageable format
+  
   const aboutData = {
     intro: {
       title: "My Brief Intro",
