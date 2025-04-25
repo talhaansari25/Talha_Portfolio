@@ -1,8 +1,10 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import "../style.css";
 
-
+// ✅ Import images
+import logo from "/favicon/TA.png";
+import heroImg from "/images/talha.jpg";
 
 const Main = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,28 +24,18 @@ const Main = () => {
             {/* Navbar */}
             <nav className="nav">
                 <Link to="/">
-                    <img src="/favicon/TA.png" alt="logo" className="logo" />
+                    <img src={logo} alt="logo" className="logo" />
                 </Link>
 
                 <ul className="menu desktop-menu">
                     <li>
                         <Link to="/" className="menu-item hvr-underline-from-left active-page">HOME</Link>
                     </li>
-                    <li>
-                        <a href="#about" className="menu-item hvr-underline-from-left">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" className="menu-item hvr-underline-from-left">PORTFOLIO</a>
-                    </li>
-                    <li>
-                        <Link to="/projects" className="menu-item hvr-underline-from-left">PROJECTS</Link>
-                    </li>
-                    <li>
-                        <a href="#blogs" className="menu-item hvr-underline-from-left">ACHIEVEMENTS</a>
-                    </li>
-                    <li>
-                        <a href="#skills" className="menu-item hvr-underline-from-left">SKILLS</a>
-                    </li>
+                    <li><a href="#about" className="menu-item hvr-underline-from-left">ABOUT</a></li>
+                    <li><a href="#portfolio" className="menu-item hvr-underline-from-left">PORTFOLIO</a></li>
+                    <li><Link to="/projects" className="menu-item hvr-underline-from-left">PROJECTS</Link></li>
+                    <li><a href="#blogs" className="menu-item hvr-underline-from-left">ACHIEVEMENTS</a></li>
+                    <li><a href="#skills" className="menu-item hvr-underline-from-left">SKILLS</a></li>
                 </ul>
 
                 {/* Toggle icon */}
@@ -61,24 +53,12 @@ const Main = () => {
                         onClick={closeMobileMenu}
                     ></i>
                     <ul className="menu menu-items">
-                        <li>
-                            <Link to="/" className="hvr-underline-from-left item" onClick={closeMobileMenu}>HOME</Link>
-                        </li>
-                        <li>
-                            <a href="#about" className="hvr-underline-from-left item" onClick={closeMobileMenu}>ABOUT</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio" className="hvr-underline-from-left item" onClick={closeMobileMenu}>PORTFOLIO</a>
-                        </li>
-                        <li>
-                            <Link to="/projects" className="hvr-underline-from-left item" onClick={closeMobileMenu}>PROJECTS</Link>
-                        </li>
-                        <li>
-                            <a href="#blogs" className="hvr-underline-from-left item" onClick={closeMobileMenu}>ACHIEVEMENTS</a>
-                        </li>
-                        <li>
-                            <a href="#skills" className="hvr-underline-from-left item" onClick={closeMobileMenu}>SKILLS</a>
-                        </li>
+                        <li><Link to="/" className="hvr-underline-from-left item" onClick={closeMobileMenu}>HOME</Link></li>
+                        <li><a href="#about" className="hvr-underline-from-left item" onClick={closeMobileMenu}>ABOUT</a></li>
+                        <li><a href="#portfolio" className="hvr-underline-from-left item" onClick={closeMobileMenu}>PORTFOLIO</a></li>
+                        <li><Link to="/projects" className="hvr-underline-from-left item" onClick={closeMobileMenu}>PROJECTS</Link></li>
+                        <li><a href="#blogs" className="hvr-underline-from-left item" onClick={closeMobileMenu}>ACHIEVEMENTS</a></li>
+                        <li><a href="#skills" className="hvr-underline-from-left item" onClick={closeMobileMenu}>SKILLS</a></li>
                     </ul>
                 </div>
             </nav>
@@ -95,17 +75,17 @@ const Main = () => {
                 </div>
                 <div className="hero-image" data-aos="fade-up">
                     <img
-                        src="/images/talha.jpg"
+                        src={heroImg}
                         alt="talhaansari"
                         onError={(e) => {
                             e.target.onerror = null;
-                            e.target.src = "https://via.placeholder.com/150"; 
+                            e.target.src = "https://via.placeholder.com/150";
                         }}
                     />
                 </div>
             </div>
         </section>
     );
-}
+};
 
 export default Main;
