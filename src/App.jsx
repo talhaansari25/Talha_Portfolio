@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     
     AOS.init({ once: true });
-    // Custom Cursor Logic
+  
     let mouseX = 0, mouseY = 0, xp = 0, yp = 0;
 
     const handleMouseMove = (e) => {
