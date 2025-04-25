@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import "../style.css";
-
+import profilePhoto from "/images/pp.jpg"; 
 const About = () => {
-  
   const aboutData = {
     intro: {
       title: "My Brief Intro",
@@ -31,7 +30,7 @@ const About = () => {
       <div className="about-container">
         <div className="about-wrapper">
           <div className="about-photo" data-aos="fade-up">
-            <img src="images/pp.jpg" alt="talhaansari" />
+            <img src={profilePhoto} alt="talhaansari" />
           </div>
           <div className="about-text" data-aos="fade-up">
             <p className="my-story">{aboutData.intro.title}</p>
@@ -44,8 +43,8 @@ const About = () => {
                 </p>
               ))}
               {!isReadMoreVisible && (
-                <button 
-                  onClick={handleReadMoreClick} 
+                <button
+                  onClick={handleReadMoreClick}
                   className="read-more-btn"
                 >
                   Read More
