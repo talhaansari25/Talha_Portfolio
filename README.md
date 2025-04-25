@@ -47,7 +47,7 @@ git clone https://github.com/yourusername/your-portfolio.git
 
 ### 2. Navigate into the folder
 
-cd your-portfolio
+cd portfolio
 
 ### 3. Install dependencies
 
@@ -73,9 +73,6 @@ This will start the Vite dev server at http://localhost:5173/ by default.
 
 ---
 
-Let me know if you want me to also include:
-- Shields.io badges (for license, version, etc.)
-- Screenshot or GIF of your website in action
-- A "Contributing" or "Future Features" section
+This project is licensed under the MIT License – feel free to use and modify it as needed for personal or professional use.
 
 
