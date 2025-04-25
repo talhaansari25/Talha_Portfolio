@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Achievement from "./components/Achievement";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
  
 import "./style.css";
 import AOS from 'aos';
@@ -50,7 +51,18 @@ function App() {
     // Preloader timeout
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 1500);
+
+    const targetId = localStorage.getItem("scrollTo");
+  if (targetId) {
+    const targetEl = document.getElementById(targetId);
+    if (targetEl) {
+      setTimeout(() => {
+        targetEl.scrollIntoView({ behavior: "smooth" });
+        localStorage.removeItem("scrollTo");
+      }, 300);
+    }
+  };
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
@@ -70,6 +82,8 @@ function App() {
         </div>
       ) : (
         <>
+
+          <ScrollToTop />
           {/* Custom Cursor */}
           <div className="custom__cursor__outer"></div>
           <div className="custom__cursor__inner"></div>
