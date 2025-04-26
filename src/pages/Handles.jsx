@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "../handles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import TALogo from '/favicon/TA.png';
 
 // Importing images from the root src/images folder
 import LL from "/images/LL.png";
