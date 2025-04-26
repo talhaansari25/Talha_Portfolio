@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../style.css";
-import profilePhoto from "/images/pp.jpg"; 
+import profilePhoto from "/images/pp.jpg";
 const About = () => {
   const aboutData = {
     intro: {
