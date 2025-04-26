@@ -101,8 +101,9 @@ const Handles = () => {
 
       <nav className="nav">
         <Link to="/">
-          <img src="/favicon/TA.png" alt="Logo" className="logo" />
+          <img src={TALogo} alt="Logo" className="logo" />
         </Link>
+
 
         <ul className="menu desktop-menu">
           <li><Link to="/" className="menu-item hvr-underline-from-left">HOME</Link></li>
