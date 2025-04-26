@@ -1308,7 +1308,7 @@ h1::selection {
     padding-left: 0;
     text-align: center;
     align-items: center;
-    margin-top: 45px;
+    margin-top: 35px;
 }
 
 .hero-name {
@@ -1381,7 +1381,7 @@ h1::selection {
   }
 
   .ticker-wrap {
-   bottom: 100px;
+   bottom: 130px;
     
   }
 
