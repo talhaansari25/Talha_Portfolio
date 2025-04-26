@@ -6,7 +6,7 @@ This is my **personal portfolio website**, completely built using **React.js**, 
 
 ## 🚀 Live Demo
 
-🔗 [Click Here to Visit My Portfolio](https://www.talhaansari.vercel.app/)  
+🔗 [Click Here to Visit My Portfolio](https://talhaansari.vercel.app/)  
 
 
 ---
@@ -66,7 +66,7 @@ This will start the Vite dev server at http://localhost:5173/ by default.
 
 🔗 Github : https://github.com/talhaansari25
 
-🌐 Portfolio : https://www.talhaansari.vercel.app/
+🌐 Portfolio : https://talhaansari.vercel.app/
 
 📧 Email: talhaansari2026@gmail.com
 
