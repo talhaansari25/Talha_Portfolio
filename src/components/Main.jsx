@@ -71,7 +71,7 @@ const Main = () => {
         </h3>
         <h1 className="hero-name">
             <span className="name-gradient">MOHD TALHA ANSARI</span>
-            <span className="cursor-animation">|</span>
+            <span className="cursor-animation"></span>
         </h1>
         <p className="hero-tagline">Full Stack Developer | ML Engineer </p>
         
