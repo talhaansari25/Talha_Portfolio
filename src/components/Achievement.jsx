@@ -107,7 +107,8 @@ const Achievement = () => {
       <div className="blog-container swiper">
         <div className="blog-wrapper">
           <div className="blog-title">
-            <h3 id="ac">{achievementsData.title}</h3>
+          <h2 className="achv-heading" style={{ color: 'white' }}>{achievementsData.title}</h2>
+
           </div>
           <div className="slide-container swiper">
             <div className="slide-content">
