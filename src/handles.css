@@ -606,10 +606,14 @@ body::-webkit-scrollbar-thumb {
   }
 
   .container .wrapper .one .title {
-    font-size: 60px;
-    width: 80%;
-    line-height: 150%;
-    font-weight: 500;
+    font-size: 45px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
     text-transform: uppercase;
   }
 
@@ -664,10 +668,14 @@ body::-webkit-scrollbar-thumb {
   }
 
   .container .wrapper .two .title {
-    font-size: 60px;
-    width: 90%;
-    line-height: 150%;
-    font-weight: 500;
+    font-size: 45px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
     text-transform: uppercase;
   }
 
