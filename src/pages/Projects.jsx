@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../projects.css";
@@ -30,18 +30,19 @@ import assessmentGenImg from '/images/Assesment Generation.jpeg';
 import summaryImg from '/images/summary.jpeg';
 
 const Projects = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
+    // Force a re-render after component mounts to fix mobile rendering issues
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      initializeCarousels();
+    }, 100);
 
-    const carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(carousel => {
-      new window.bootstrap.Carousel(carousel, {
-        interval: 2000,
-        ride: 'carousel',
-        pause: false,
-      });
-    });
+    // Initialize carousels after images are likely loaded
+    const imageLoadTimer = setTimeout(initializeCarousels, 500);
 
-    //  Mobile menu toggle
+    // Mobile menu toggle logic
     const toggleMenuBtn = document.querySelector("#toggle-menu");
     const closeMenuBtn = document.querySelector("#close-btn");
     const mobileMenu = document.querySelector(".mobile-menu");
@@ -61,7 +62,7 @@ const Projects = () => {
     closeMenuBtn?.addEventListener("click", closeMenu);
     overlay?.addEventListener("click", closeMenu);
 
-
+    // Scroll to target if needed
     const targetId = localStorage.getItem("scrollTo");
     if (targetId) {
       const targetEl = document.getElementById(targetId);
@@ -74,11 +75,43 @@ const Projects = () => {
     }
 
     return () => {
+      clearTimeout(timer);
+      clearTimeout(imageLoadTimer);
       toggleMenuBtn?.removeEventListener("click", openMenu);
       closeMenuBtn?.removeEventListener("click", closeMenu);
       overlay?.removeEventListener("click", closeMenu);
     };
   }, []);
+
+  // Initialize carousels with proper timing
+  const initializeCarousels = () => {
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+      // Destroy existing carousel if any
+      const existingCarousel = window.bootstrap.Carousel.getInstance(carousel);
+      if (existingCarousel) {
+        existingCarousel.dispose();
+      }
+      
+      // Initialize new carousel
+      new window.bootstrap.Carousel(carousel, {
+        interval: 2000,
+        ride: 'carousel',
+        pause: false,
+      });
+    });
+  };
+
+  // Add a slight delay before showing content to ensure proper rendering
+  if (isLoading) {
+    return (
+      <div className="loading-overlay">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
 
 
 
