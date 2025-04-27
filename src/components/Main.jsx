@@ -65,59 +65,62 @@ const Main = () => {
 
             {/* Hero Section */}
             <div className="hero">
-    <div className="hero-items">
-        <h3 className="hero-hello">
-            <span className="wave-emoji">👋</span> Hello, I Am
-        </h3>
-        <h1 className="hero-name">
-            <span className="name-gradient">MOHD TALHA ANSARI</span>
-            <span className="cursor-animation"></span>
-        </h1>
-        <p className="hero-tagline">Full Stack Developer | ML Engineer </p>
-        
-        <div className="hero-cta-container">
-            <a href="#about" className="hero-cta">
-                KNOW MORE
-                <i className="fa-solid fa-circle-chevron-right"></i>
-            </a>
-            <a href="#contact" className="hero-cta secondary">
-                HIRE ME
-                <i className="fa-solid fa-paper-plane"></i>
-            </a>
-        </div>
-        
-        <div className="social-icons">
-            <a href="#" className="social-icon"><i className="fab fa-github"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-linkedin"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-twitter"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-instagram"></i></a>
-        </div>
-    </div>
-    
-    <div className="hero-image-container" data-aos="fade-up">
-        <div className="image-wrapper">
-            <img
-                src={heroImg}
-                alt="talhaansari"
-                className="profile-image"
-                onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "https://via.placeholder.com/150";
-                }}
-            />
-            <div className="image-border-animation"></div>
-            <div className="floating-dots">
-                {[...Array(12)].map((_, i) => (
-                    <span key={i} className="dot" style={{
-                        '--delay': `${i * 0.2}s`,
-                        '--size': `${Math.random() * 6 + 4}px`,
-                        '--distance': `${Math.random() * 40 + 60}px`
-                    }}></span>
-                ))}
+                <div className="hero-items">
+                    <h3 className="hero-hello">
+                        <span className="wave-emoji">👋</span> Hello, I Am
+                    </h3>
+                    <h1 className="hero-name">
+                        <span className="name-gradient">MOHD TALHA ANSARI</span>
+                        <span className="cursor-animation"></span>
+                    </h1>
+                    <p className="hero-tagline">Full Stack Developer | ML Engineer </p>
+
+                    <div className="hero-cta-container">
+                        <a href="#about" className="hero-cta">
+                            KNOW MORE
+                            <i className="fa-solid fa-circle-chevron-right"></i>
+                        </a>
+                        <a href="mailto:talhaansari2026@gmail.com" className="hero-cta secondary">
+                            HIRE ME
+                            <i className="fa-solid fa-paper-plane"></i>
+                        </a>
+
+                    </div>
+
+                    <div className="social-icons">
+
+                        <a href="https://www.linkedin.com/in/talha-ansari-22189b1bb/" className="social-icon"><i className="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/talhaansari25" className="social-icon"><i className="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/_talhaansari__25/?hl=en" className="social-icon"><i className="fab fa-instagram"></i></a>
+                        <a href="tel:+918625957764" className="social-icon"><i className="fa-solid fa-phone"></i></a>
+
+                    </div>
+                </div>
+
+                <div className="hero-image-container" data-aos="fade-up">
+                    <div className="image-wrapper">
+                        <img
+                            src={heroImg}
+                            alt="talhaansari"
+                            className="profile-image"
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = "https://via.placeholder.com/150";
+                            }}
+                        />
+                        <div className="image-border-animation"></div>
+                        <div className="floating-dots">
+                            {[...Array(12)].map((_, i) => (
+                                <span key={i} className="dot" style={{
+                                    '--delay': `${i * 0.2}s`,
+                                    '--size': `${Math.random() * 6 + 4}px`,
+                                    '--distance': `${Math.random() * 40 + 60}px`
+                                }}></span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
         </section>
     );
 };
