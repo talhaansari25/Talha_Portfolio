@@ -56,7 +56,7 @@ const Skills = () => {
   return (
     <section id="skills" data-aos="fade-up">
       <div className="skills-container">
-        <h3 className="proficiency-heading">MY Technical SKILLS</h3>
+        <h3 className="proficiency-heading">Technical SKILLS</h3>
         <div className="skills-wrapper" data-aos="fade-up">
           {skillsData.map((skill, index) => (
             <div

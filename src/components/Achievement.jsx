@@ -17,7 +17,7 @@ import NU from '/images/nu.jpg';
 
 const Achievement = () => {
   const achievementsData = {
-    title: "MY ACHIEVEMENTS",
+    title: "Awards & Achievemets",
     cards: [
       {
         id: 1,
