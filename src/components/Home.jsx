@@ -13,37 +13,39 @@ import Main from "./Main";
 import Ticker from "./Ticker";
 
 import Education from "./Education";
+import Proficiency from "./Proficiency";
 
 
 
 
 const Home = () => {
 
- 
-    useEffect(() => {
-      const targetId = localStorage.getItem("scrollTo");
-      if (targetId) {
-        const targetEl = document.getElementById(targetId);
-        if (targetEl) {
-          setTimeout(() => {
-            targetEl.scrollIntoView({ behavior: "smooth" });
-            localStorage.removeItem("scrollTo");
-          }, 300);
-        }
+
+  useEffect(() => {
+    const targetId = localStorage.getItem("scrollTo");
+    if (targetId) {
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        setTimeout(() => {
+          targetEl.scrollIntoView({ behavior: "smooth" });
+          localStorage.removeItem("scrollTo");
+        }, 300);
       }
-    }, []);
+    }
+  }, []);
 
   return (
-   <div>
+    <div>
     <Main/>
-    <Ticker />
+      <Ticker />
     <About />
     <Education/>
     <Portfolio/>
     <Achievement/>
     <Skills/>
+    <Proficiency/>
     <Footer/>
-   </div>
+    </div>
     
 
     
