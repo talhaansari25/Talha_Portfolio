@@ -40,7 +40,10 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" data-aos="fade-up">
+    <h2 className="proficiency-heading" style={{ textAlign: 'center' }}>My Portfolios</h2>
+
       <div className="portfolio-container">
+      
         <div className="portfolio-wrapper">
           {portfolioItems.map(item => (
             <div 
