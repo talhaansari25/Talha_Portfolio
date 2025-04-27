@@ -32,6 +32,37 @@ import summaryImg from '/images/summary.jpeg';
 const Projects = () => {
   useEffect(() => {
 
+
+    
+      // Force a re-render after component mounts to fix mobile rendering issues
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        initializeCarousels();
+      }, 100);
+  
+     
+   
+  
+    // Initialize carousels with proper timing
+    const initializeCarousels = () => {
+      const carousels = document.querySelectorAll('.carousel');
+      carousels.forEach(carousel => {
+        // Destroy existing carousel if any
+        const existingCarousel = window.bootstrap.Carousel.getInstance(carousel);
+        if (existingCarousel) {
+          existingCarousel.dispose();
+        }
+        
+        // Initialize new carousel
+        new window.bootstrap.Carousel(carousel, {
+          interval: 2000,
+          ride: 'carousel',
+          pause: false,
+        });
+      });
+    };
+  
+
     const carousels = document.querySelectorAll('.carousel');
     carousels.forEach(carousel => {
       new window.bootstrap.Carousel(carousel, {
