@@ -640,7 +640,7 @@ h1::selection {
   }
 
   #blogs {
-    height: 600px !important;
+    height: 700px !important;
     background: linear-gradient(100deg, var(--LightBlue), var(--DarkBlue));
     padding-bottom: 40px;
     padding-top: 80px;
@@ -1632,6 +1632,8 @@ h1::selection {
   width: 130px;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
+  
+  
 } 
 .resume-download-btn {
   padding: 12px 24px;
@@ -1836,13 +1838,14 @@ h1::selection {
 }
 
 .hero-name {
-  font-size: 76px;
+  font-size: 70px;
+  font-weight: 800;
   background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue), #6e48aa);
-  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
-  line-height: 1.1;
+  background-clip: text;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
   animation: gradientShift 5s ease infinite, fadeInUp 1s ease-out;
 }
 
@@ -1925,10 +1928,13 @@ h1::selection {
 .hero-cta:not(.secondary):hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(100, 149, 237, 0.6);
+  
 }
 
 .hero-cta.secondary:hover {
   background: rgba(100, 149, 237, 0.1);
+  color: white;
+  background-color: white;
 }
 
 .hero-cta:hover i {
