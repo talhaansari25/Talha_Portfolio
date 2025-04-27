@@ -1,0 +1,353 @@
+/* ====== Proficiency Section ====== */
+.proficiency-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Decorative background */
+  .proficiency-section::before,
+  .proficiency-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    z-index: 0;
+  }
+  
+  .proficiency-section::before {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+    left: -80px;
+  }
+  
+  .proficiency-section::after {
+    width: 350px;
+    height: 350px;
+    bottom: -120px;
+    right: -120px;
+  }
+  
+  /* Container */
+  .proficiency-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .proficiency-heading {
+    font-size: 45px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  .proficiency-:hover{
+    color: white;
+    background-color: white;
+  }
+  .achv-heading {
+    font-size: 45px;
+    font-weight: 800;
+    background : white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  /* Subheading */
+  .proficiency-subheading {
+    font-size: 18px;
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+  }
+  
+  /* Grid */
+  .proficiency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Card */
+  .proficiency-card {
+    /* background: rgba(255, 255, 255, 0.25); */
+    background: white;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .proficiency-card:hover {
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.25); /* Added shadow on hover */
+    /* background: linear-gradient(90deg, var(--LightBlue), var(--DarkBlue), #6e48aa); */
+  transform: scale(1.05); /* Slight pop-up */
+  color: white; /* Text color change */
+
+  }
+  
+  /* Info */
+  .proficiency-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+   
+  .proficiency-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-transform: uppercase;
+  }
+  
+  
+  .proficiency-percent {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4f46e5;
+  }
+  
+  /* Progress Bar */
+  .proficiency-bar {
+    height: 12px;
+    background: #d1d5db;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .proficiency-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    border-radius: 6px;
+    width: 0; /* initially 0 */
+    transition: width 2s ease-in-out;
+  }
+  
+  /* This part will dynamically set width through inline style */
+  .proficiency-progress::after {
+    content: attr(data-percent)'%';
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3b82f6;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .proficiency-card:hover .proficiency-progress::after {
+    opacity: 1;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .proficiency-section {
+      padding: 80px 15px;
+    }
+    .proficiency-heading {
+      font-size: 36px;
+    }
+    .proficiency-subheading {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .proficiency-section {
+      padding: 60px 10px;
+    }
+    .proficiency-heading {
+      font-size: 30px;
+    }
+    .proficiency-name {
+      font-size: 18px;
+    }
+    .proficiency-bar {
+      height: 10px;
+    }
+  }
+  
+  /* Add these new styles to your existing CSS */
+
+.stars-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 5px;
+  }
+  
+  .star-icon {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 24px;
+    position: relative;
+  }
+  
+  .star-icon.empty {
+    color: #d1d5db; /* Light gray for empty stars */
+  }
+  
+  /* Half star styling */
+  .star-icon:nth-child(5) {
+    position: relative;
+  }
+  
+  .star-icon:nth-child(5)::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #FFD700;
+  }
+  
+  .proficiency-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4f46e5;
+    text-transform: capitalize;
+  }
+  
+  /* Update the proficiency-info to center align vertically */
+  .proficiency-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Remove the progress bar related styles and replace with star rating styles */
+
+  /* Add/update these styles in your Proficiency.css */
+
+.stars-container {
+    display: flex;
+    justify-content: flex-start; /* Align stars to the left */
+    margin-top: 10px;
+    gap: 5px;
+  }
+  
+  .star-icon {
+    font-size: 32px; /* Bigger stars */
+    position: relative;
+    color: #d1d5db; /* Default color for empty stars */
+  }
+  
+  .star-icon.full {
+    color: #FFD700; /* Gold color for full stars */
+  }
+  
+  .star-icon.half {
+    position: relative;
+    color: #d1d5db; /* Gray background for half star */
+  }
+  
+  .star-icon.half::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #FFD700; /* Gold color for the filled half */
+  }
+  
+  .proficiency-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4f46e5;
+    text-transform: capitalize;
+  }
+  
+  /* Update proficiency card layout */
+  .proficiency-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align all content to the left */
+    padding: 25px;
+  }
+  
+  .proficiency-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Remove any existing progress bar styles */
+
+  /* Add these new styles to your existing CSS */
+
+/* Swiper styles */
+.mobile-swiper {
+    width: 100%;
+    padding: 20px 0 40px;
+  }
+  
+  .mobile-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Swiper navigation arrows */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #3b82f6;
+    top: 40%;
+  }
+  
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 24px;
+  }
+  
+  /* Swiper pagination bullets */
+  .swiper-pagination-bullet {
+    background: #d1d5db;
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #3b82f6;
+  }
+  
+  /* Make cards slightly smaller on mobile */
+  @media (max-width: 768px) {
+    .proficiency-card {
+      width: 90%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    
+    .star-icon {
+      font-size: 28px;
+    }
+  }
+  
+  /* Keep existing styles for desktop */
+  .proficiency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Rest of your existing CSS remains the same */
