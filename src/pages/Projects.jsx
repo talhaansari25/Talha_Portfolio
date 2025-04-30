@@ -28,6 +28,12 @@ import coursePageImg from '/images/Course Page.jpeg';
 import aiCounsellorImg from '/images/AI Based Counsellor.jpeg';
 import assessmentGenImg from '/images/Assesment Generation.jpeg';
 import summaryImg from '/images/summary.jpeg';
+import one from '/images/comp.jpg';
+import two from '/images/allcomp.jpg';
+import three from '/images/admin.jpg';
+import four from '/images/status.jpg';
+import five from '/images/email.jpg';
+
 
 const Projects = () => {
   useEffect(() => {
@@ -230,7 +236,7 @@ Check out my work on GitHub!`,
           }, 
           {
             title: "UP Samadhan",
-            images: [userDashboardImg, adminDashboardImg, welcomePageImg, singleShipmentImg, multipleShipmentsImg],
+            images: [one, two, three, four, five],
             description: `UP Samadhan (IGRS) is an AI-powered complaint management platform built as advancement of IGRS, integrating Vision Transformers and classifiers to automate image-based and text based grievance categorization and prioritization. Built with React.js (frontend), Node.js/Express.js (backend), MongoDB, and Flask for ML integration—ensuring secure, regulation-compliants.
 Check out my work on GitHub!`,
             github: "https://www.github.com/talhaansari25/Logi-Comply"
