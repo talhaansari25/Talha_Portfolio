@@ -229,6 +229,13 @@ Check out my work on GitHub!`,
             github: "https://www.github.com/talhaansari25/GCR-Global_Catalog_Registry"
           }, 
           {
+            title: "UP Samadhan",
+            images: [userDashboardImg, adminDashboardImg, welcomePageImg, singleShipmentImg, multipleShipmentsImg],
+            description: `UP Samadhan (IGRS) is an AI-powered complaint management platform built as advancement of IGRS, integrating Vision Transformers and classifiers to automate image-based and text based grievance categorization and prioritization. Built with React.js (frontend), Node.js/Express.js (backend), MongoDB, and Flask for ML integration—ensuring secure, regulation-compliants.
+Check out my work on GitHub!`,
+            github: "https://www.github.com/talhaansari25/Logi-Comply"
+          }, 
+          {
             title: "LogiComply",
             images: [userDashboardImg, adminDashboardImg, welcomePageImg, singleShipmentImg, multipleShipmentsImg],
             description: `LogiComply is an AI-Powered Compliance Checker for Cross-Border Shipments , An intelligent system that validates international shipments using rule-based logic and ML models like XGBoost to detect anomalies and flag high-risk consignments.
