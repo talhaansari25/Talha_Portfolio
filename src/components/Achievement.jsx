@@ -14,6 +14,7 @@ import Prax from '/images/prax.jpg';
 import LG from '/images/lg.jpg';
 import QS from '/images/Qs.jpg';
 import NU from '/images/nu.jpg';
+import iiit from '/images/iiit.png';
 
 const Achievement = () => {
   const achievementsData = {
@@ -46,15 +47,7 @@ const Achievement = () => {
         link: "https://www.linkedin.com/posts/talha-ansari-22189b1bb_hackathon-innovation-logithon-activity-7305288162472304641-uUxZ",
         aosDelay: 300
       },
-      {
-        id: 4,
-        image: QS,
-        alt: "Quasar Hackathon",
-        title: "Quasar 2.0 Hackathon",
-        description: "Top 5 Teams at Quasar 2.0 Hackathon at VPPCOEVA, Mumbai",
-        link: "https://www.linkedin.com/posts/sumeet-gupta-ba2216209_quasar-smarteducation-innovation-ugcPost-7176274567353548800-N7Eb",
-        aosDelay: 400
-      },
+      
       {
         id: 5,
         image: NU,
@@ -63,7 +56,25 @@ const Achievement = () => {
         description: "Finalist at DebugOn X Edc IIT Delhi with ONDC under Ministry of Industry and Internal Trade.",
         link: "https://www.linkedin.com/posts/talha-ansari-22189b1bb_ondc-ecommerce-innovation-activity-7294771086150283268-3Ku9",
         aosDelay: 500
-      }
+      },
+      {
+        id: 4,
+        image: QS,
+        alt: "Quasar Hackathon",
+        title: "Hackofiesta 6.0 IIIT Lucknow",
+        description: "Top 25 Finalist at Hackofiesta 6.0 Hackathon organized by IIIT Lucknow .",
+        link: "https://www.linkedin.com/posts/sumeet-gupta-ba2216209_quasar-smarteducation-innovation-ugcPost-7176274567353548800-N7Eb",
+        aosDelay: 400
+      },
+      // {
+      //   id: 6,
+      //   image: iiit,
+      //   alt: "iiit",
+      //   title: "Hackofiesta IIIT Lucknow ",
+      //   description: "Top 25 Finalist at Hackofiesta 6.0 IIIT Lucknow .",
+      //   link: "https://www.linkedin.com/posts/talha-ansari-22189b1bb_ondc-ecommerce-innovation-activity-7294771086150283268-3Ku9",
+      //   aosDelay: 500
+      // }
     ]
   };
 
